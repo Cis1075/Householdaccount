@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- css読み込み -->
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+
+    <!-- css記述 -->
+    <style>
+        .top{
+            width: 100px;
+            margin-left: auto;
+        }
+    </style>
+
+    <!-- Javascript読み込み -->
+    <script language="javascript" type="text/javascript">
+        {% block extra_javascript %}{% endblock %}
+    </script>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="d_menu_host"><a href="#">登録 <span>▼</span></a>
+                <ul class="d_menu">
+                    <li class="d_list"><a href="/accountbook/register">登録</a></li>
+                    <li class="d_list"><a href="/accountbook/register/category">カテゴリー登録　</a></li>
+                </ul>
+            </li>
+            <li><a href="/accountbook/change">変更</a></li>
+
+            <li><a href="/accountbook/inquiry">家計簿照会</a></li>
+            <div class="top">
+                <li><a href="/">TOPへ</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- 個別のhtml表示用 -->
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- グラフ表示用　-->
+    <div id="graph">
+        {% block graph%}
+        {% endblock %}
+    </div>
+
+
+</body>
+</html>

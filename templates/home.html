@@ -1,0 +1,25 @@
+{% load static%}
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Household account</title>
+    <!-- css読み込み -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <br>
+    <h1 style="text-align:center">家計簿データベース</h1>
+    <br>
+    <!-- データベース登録画面へ -->
+    <div align="center">
+    <a href="accountbook/register" class="btn">登録</a>
+
+    <!-- データベース修正・削除画面へ -->
+    <a style="text-align:center" href="accountbook/change" class="btn">変更</a>
+
+    <!-- データベース閲覧画面へ -->
+    <a style="text-align:center" href="accountbook/inquiry" class="btn">家計簿照会</a>
+    </div>
+</body>
+</html>
